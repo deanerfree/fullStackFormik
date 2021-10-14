@@ -1,7 +1,8 @@
 .App {
 	display: flex;
-	/* margin: 20px;
-	padding: 10px; */
+	justify-content: center;
+	margin: 20px;
+	padding: 10px;
 }
 
 .wrapper {
@@ -16,4 +17,9 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.fieldItem {
+	margin: 10px;
+	padding: 10px;
 }

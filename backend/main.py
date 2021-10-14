@@ -11,7 +11,7 @@ from fastapi import FastAPI
 # structured after this app https://testdriven.io/blog/fastapi-mongo/
 
 app = FastAPI(title="Related Blog Articles",
-              description="This API was built with FastAPI and exists to find related blog articles given the ID of blog article.",
+              description="This API was built with FastAPI to manage form data",
               version="1.0.0",
               server=[
                   {
