@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 
-from server.controller import (
+from server.controller.controller import (
     fetchAllUsers,
     fetchUser,
     createUser,
@@ -41,7 +41,7 @@ async def postUser(user: CreateUser = Body(...)):
     newUser = await createUser((user))
     if newUser:
         return ResponseModel(newUser, "User added successfully.")
-    return ErrorResponseModel("Error", 400, "User was not added")
+    return ErrorResponseModel("An error occurred.", 400, "User was not added")
 
 
 @router.delete("/deleteUser/{id}", response_description="remove user data")
@@ -49,7 +49,7 @@ async def delete_by_id(id: str):
     response = await deleteUser(id)
     if response:
         return ResponseModel(f"User with ID: {id} removed".format(id), "User deleted successfully")
-    return ErrorResponseModel("Error", 404, f"There is no user with this id: {id}")
+    return ErrorResponseModel("An error occurred.", 404, f"There is no user with this id: {id}")
 
 
 @router.put("/updateUser/{id}", response_description="Update a user")

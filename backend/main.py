@@ -8,6 +8,7 @@ from fastapi import FastAPI
 # install the packages to run fastAPI locally 'pip3 install -r requirements.txt'
 # * note: FastAPI also installs pydantic, starlette, typing-extensions
 # to run the server 'uvicorn server.app:app --reload'
+# structured after this app https://testdriven.io/blog/fastapi-mongo/
 
 app = FastAPI(title="Related Blog Articles",
               description="This API was built with FastAPI and exists to find related blog articles given the ID of blog article.",
