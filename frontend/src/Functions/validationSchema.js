@@ -25,17 +25,20 @@ export const validation = [
 			.required("Required")
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
-		address2: Yup.string("@")
+		address2: Yup.string()
+
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
 		city: Yup.string()
+			.required("Required")
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
 		province: Yup.string()
-			.required("Must be a number")
+			.required("Required")
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
 		postalcode: Yup.string()
+			.required("Required")
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
 	}),

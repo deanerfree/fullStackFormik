@@ -4,10 +4,7 @@ import { Card, CardContent, Button } from "@material-ui/core"
 import { Form, Formik } from "formik"
 import { validation } from "../Functions/validationSchema"
 import initialFormField from "../model/initialFormModel"
-
-import FormStep1 from "./FormStep1"
-import FormStep2 from "./FormStep2"
-import FormReview from "./FormReview"
+import formStepper from "../Functions/formStepper"
 
 export default function UserForm() {
 	const [activeStep, setActiveStep] = useState(0)
@@ -21,18 +18,6 @@ export default function UserForm() {
 		setActiveStep(activeStep + 1)
 	}
 
-	function formStepper(step) {
-		switch (step) {
-			case 0:
-				return <FormStep1 />
-			case 1:
-				return <FormStep2 />
-			case 2:
-				return <FormReview />
-			default:
-				return <div>Not Found</div>
-		}
-	}
 	return (
 		<Card>
 			<CardContent className='wrapper'>
@@ -41,9 +26,13 @@ export default function UserForm() {
 					validationSchema={currentValidationSchema}
 					onSubmit={() => {}}>
 					<Form autoComplete='off' className='formWrapper'>
-						{formStepper(activeStep)}
-						<Button onClick={() => setActiveStep(activeStep - 1)}>Back</Button>
-						<Button onClick={changeStep}>Next</Button>
+						<div className='formBody'>{formStepper(activeStep)}</div>
+						<div className='buttonWrapper'>
+							<Button onClick={() => setActiveStep(activeStep - 1)}>
+								Back
+							</Button>
+							<Button onClick={changeStep}>Next</Button>
+						</div>
 					</Form>
 				</Formik>
 			</CardContent>
