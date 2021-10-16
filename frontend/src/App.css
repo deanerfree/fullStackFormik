@@ -11,7 +11,7 @@
 	/* justify-content: center; */
 	flex-direction: column;
 	width: 40vw;
-	height: fit-content;
+	height: 75vh;
 }
 
 .formWrapper {
@@ -21,15 +21,19 @@
 }
 
 .fieldItem {
-	margin: 10px;
-	padding: 10px;
+	height: 70px;
+	/* padding: 10px; */
+	width: 100%;
 }
 
 .formBody {
 	margin: 10px;
+	height: 63vh;
 }
+
 .buttonWrapper {
 	display: flex;
+	height: 10vh;
 	margin: 10px;
 	justify-content: space-around;
 }
