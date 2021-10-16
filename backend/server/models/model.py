@@ -14,6 +14,11 @@ class CreateUser(BaseModel):
     lastName: str
     age: int
     company: str
+    address1: str
+    address2: str
+    city: str
+    province: str
+    postalcode: str
 
     class Config:
         arbitrary_types_allowed = True
@@ -28,6 +33,11 @@ class UpdateUser(BaseModel):
     lastName: Optional[str]
     age: Optional[int]
     company: Optional[str]
+    address1: Optional[str]
+    address2: Optional[str]
+    city: Optional[str]
+    province: Optional[str]
+    postalcode: Optional[str]
 
     class Config:
         arbitrary_types_allowed = True
