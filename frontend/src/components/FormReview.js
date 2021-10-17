@@ -11,16 +11,36 @@ export default function FormReview() {
 				Review Details
 			</Typography>
 
-			<Typography>First Name: {values.firstName}</Typography>
-			<Typography>Last Name: {values.lastName}</Typography>
-			<Typography>Email: {values.email}</Typography>
-			<Typography>Age: {values.age}</Typography>
-			<Typography>Company: {values.company}</Typography>
-			<Typography>Address 1: {values.address1}</Typography>
-			<Typography>Address 2: {values.address2}</Typography>
-			<Typography>City: {values.city}</Typography>
-			<Typography>Province: {values.province}</Typography>
-			<Typography>Postal Code: {values.postalcode}</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				First Name: {values.firstName}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Last Name: {values.lastName}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Email: {values.email}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Age: {values.age}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Company: {values.company}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Address 1: {values.address1}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Address 2: {values.address2}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				City: {values.city}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Province: {values.province}
+			</Typography>
+			<Typography variant='body1' style={{ fontSize: "15px" }}>
+				Postal Code: {values.postalcode}
+			</Typography>
 		</CardContent>
 	)
 }
