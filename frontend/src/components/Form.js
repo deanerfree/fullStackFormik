@@ -10,8 +10,6 @@ export default function UserForm() {
 	const [activeStep, setActiveStep] = useState(0)
 	const currentValidationSchema = validation[activeStep]
 	// const numVal = /[1-9][0-9]/
-	console.log(currentValidationSchema)
-	console.log(activeStep)
 
 	const _stepBack = () => {
 		if (activeStep === 0) return

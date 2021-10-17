@@ -1,6 +1,7 @@
 from server.models.model import (CreateUser)
 from server.db import (collection)
 from bson import ObjectId
+from datetime import datetime
 
 
 async def fetchAllUsers():
@@ -52,5 +53,12 @@ def helper(user) -> dict:
         "lastName": user["lastName"],
         "age": user["age"],
         "company": user["company"],
+        "address1": user["address1"],
+        "address2": user["address2"],
+        "city": user["city"],
+        "province": user["province"],
+        "postalcode": user["postalcode"],
+        "createDate": user["createDate"],
+        "dateUpdated": user["dateUpdated"]
 
     }

@@ -1,10 +1,10 @@
 from pydantic import BaseModel, Field
-from bson import ObjectId
-from datetime import datetime, date
+from bson import ObjectId, Timestamp
+from datetime import datetime
 from typing import Optional
 
-currentDateTime = datetime.now()
-currentDate = date.today()
+currentDateTime = datetime
+# currentDate = date.today()
 
 # Model to create a user
 
@@ -19,12 +19,12 @@ class CreateUser(BaseModel):
     city: str
     province: str
     postalcode: str
+    createDate: currentDateTime
+    dateUpdated: currentDateTime
 
     class Config:
         arbitrary_types_allowed = True
-        json_encoders = {
-            ObjectId: str
-        }
+        json_encoders = {ObjectId: str}
 
 
 # Model if updating a user
@@ -38,18 +38,19 @@ class UpdateUser(BaseModel):
     city: Optional[str]
     province: Optional[str]
     postalcode: Optional[str]
+    dateUpdated: Optional[currentDateTime]
 
     class Config:
         arbitrary_types_allowed = True
         json_encoders = {ObjectId: str}
-        schema_extra = {
-            "example": {
-                "firstName": "Greg",
-                "lastName": "Dog",
-                "age": "30",
-                "company": "Cenovus",
-            }
-        }
+        # schema_extra = {
+        #     "example": {
+        #         "firstName": "Greg",
+        #         "lastName": "Dog",
+        #         "age": "30",
+        #         "company": "Cenovus",
+        #     }
+        # }
 
 # Successful response header
 
