@@ -13,12 +13,12 @@ export const validation = [
 		lastName: Yup.string()
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
-		age: Yup.string()
-			.required("Must be a number")
-			.max(3, "less than 2 characters"),
-		company: Yup.string()
-			.min(3, "must contain at least 3 characters")
-			.max(20, "Max 20 characters"),
+		age: Yup.string(),
+		// .required("Must be a number")
+		// .max(3, "less than 2 characters"),
+		company: Yup.string(),
+		// .min(3, "must contain at least 3 characters")
+		// .max(20, "Max 20 characters"),
 	}),
 	Yup.object({
 		address1: Yup.string()
