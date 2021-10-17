@@ -34,7 +34,7 @@ export const validation = [
 			.max(20, "Max 20 characters"),
 		province: Yup.string()
 			.required("Required")
-			.min(3, "must contain at least 3 characters")
+			.min(2, "must contain at least 2 characters")
 			.max(20, "Max 20 characters"),
 		postalcode: Yup.string()
 			.required("Required")

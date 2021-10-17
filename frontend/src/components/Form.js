@@ -1,6 +1,7 @@
 import "../App.css"
-import { useState } from "react"
-import { Card, CardContent, Button } from "@material-ui/core"
+import React, { useState } from "react"
+import { CircularProgress } from "@mui/material"
+import { Card, CardContent, Button, Box } from "@material-ui/core"
 import { Form, Formik } from "formik"
 import { validation } from "../Functions/validationSchema"
 import initialFormField from "../model/initialFormModel"
@@ -45,19 +46,25 @@ export default function UserForm() {
 					{({ isSubmitting }) => (
 						<Form autoComplete='off' className='formWrapper'>
 							<div className='formBody'>{formStepper(activeStep)}</div>
-							<div className='buttonWrapper'>
-								{activeStep === 0 ? null : (
-									<Button onClick={_stepBack}>Back</Button>
+
+							<Box>
+								{isSubmitting ? (
+									<CircularProgress />
+								) : (
+									<div className='buttonWrapper'>
+										{activeStep === 0 ? null : (
+											<Button onClick={_stepBack}>Back</Button>
+										)}
+										<Button
+											disabled={isSubmitting}
+											type='submit'
+											variant='contained'
+											color='primary'>
+											{activeStep === 2 ? "Submit" : "Next"}
+										</Button>
+									</div>
 								)}
-								{isSubmitting ? <p>Hello</p> : null}
-								<Button
-									disabled={isSubmitting}
-									type='submit'
-									variant='contained'
-									color='primary'>
-									{activeStep === 2 ? "Submit" : "Next"}
-								</Button>
-							</div>
+							</Box>
 						</Form>
 					)}
 				</Formik>
