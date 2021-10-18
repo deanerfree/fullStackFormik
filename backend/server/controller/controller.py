@@ -22,6 +22,7 @@ async def fetchUser(id: str) -> dict:
 
 async def createUser(user: dict) -> dict:
     user["createDate"] = currentDateTime
+    user["dateUpdated"] = currentDateTime
     print('hello', user["createDate"])
     user = await collection.insert_one(user)
     newUser = await collection.find_one({"_id": user.inserted_id})
@@ -41,10 +42,11 @@ async def updateUser(id: str, data: dict):
         return False
     user = await collection.find_one({"_id": ObjectId(id)})
     if user:
-        print('I\'m being updated', updated)
+        data["dateUpdated"] = currentDateTime
         updated = await collection.update_one(
             {"_id": ObjectId(id)}, {"$set": data}
         )
+        print('Being updated', data)
         if updated:
             return True
         return False
@@ -64,6 +66,5 @@ def helper(user) -> dict:
         "province": user["province"],
         "postalcode": user["postalcode"],
         "createDate": user["createDate"],
-        "dateUpdated": user["dateUpdated"]
-
+        "dateUpdated": user["dateUpdated"],
     }

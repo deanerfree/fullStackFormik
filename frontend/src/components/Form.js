@@ -27,8 +27,8 @@ export default function UserForm() {
 		if (values.age === "") {
 			values.age = 0
 		}
-		values.createDate = date.toString()
-		values.dateUpdated = date.toString()
+		// values.createDate = date.toString()
+		// values.dateUpdated = date.toString()
 		console.log(values)
 		axios
 			.post("/api/create", values)
