@@ -4,6 +4,8 @@ from bson import ObjectId
 from datetime import datetime
 
 currentDateTime = datetime.now()
+format = "%d/%m/%Y %H:%M:%S"
+formattedDateTime = currentDateTime.strftime(format)
 
 
 async def fetchAllUsers():
@@ -21,9 +23,13 @@ async def fetchUser(id: str) -> dict:
 
 
 async def createUser(user: dict) -> dict:
-    user["createDate"] = currentDateTime
-    user["dateUpdated"] = currentDateTime
+    user["createDate"] = formattedDateTime
+    user["dateUpdated"] = formattedDateTime
     print('hello', user["createDate"])
+
+    # checkCollection = collection.find_one(user["email"])
+    # if checkCollection:
+    #     return True
     user = await collection.insert_one(user)
     newUser = await collection.find_one({"_id": user.inserted_id})
     return helper(newUser)
@@ -42,7 +48,7 @@ async def updateUser(id: str, data: dict):
         return False
     user = await collection.find_one({"_id": ObjectId(id)})
     if user:
-        data["dateUpdated"] = currentDateTime
+        data["dateUpdated"] = formattedDateTime
         updated = await collection.update_one(
             {"_id": ObjectId(id)}, {"$set": data}
         )

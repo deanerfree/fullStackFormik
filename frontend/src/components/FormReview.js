@@ -18,7 +18,7 @@ export default function FormReview() {
 			<Box sx={{ margin: "20px" }}>
 				{array.map((item, index) => {
 					if (item[0] === "createDate" || item[0] === "dateUpdated") {
-						return
+						return null
 					}
 					return (
 						<div key={index}>

@@ -3,7 +3,7 @@ import { Typography } from "@material-ui/core"
 import { Field } from "formik"
 import { TextField } from "formik-material-ui"
 
-export default function FormStep1({ initialValues }) {
+export default function FormStep1() {
 	return (
 		<div>
 			<Typography variant='h2'>Form</Typography>

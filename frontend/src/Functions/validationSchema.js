@@ -13,21 +13,21 @@ export const validation = [
 		lastName: Yup.string()
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
-		age: Yup.string(),
-		// .required("Must be a number")
-		// .max(3, "less than 2 characters"),
-		company: Yup.string(),
-		// .min(3, "must contain at least 3 characters")
-		// .max(20, "Max 20 characters"),
+		age: Yup.string()
+			.required("Must be a number")
+			.max(2, "less than 2 characters"),
+		company: Yup.string()
+			.min(1, "must contain at least 1 characters")
+			.max(20, "Max 20 characters"),
 	}),
 	Yup.object({
 		address1: Yup.string()
 			.required("Required")
 			.min(3, "must contain at least 3 characters")
-			.max(20, "Max 20 characters"),
+			.max(30, "Max 20 characters"),
 		address2: Yup.string()
 			.min(3, "must contain at least 3 characters")
-			.max(20, "Max 20 characters"),
+			.max(30, "Max 20 characters"),
 		city: Yup.string()
 			.required("Required")
 			.min(3, "must contain at least 3 characters")

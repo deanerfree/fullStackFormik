@@ -11,6 +11,7 @@ export default function formStepper(step) {
 			return <FormStep2 />
 		case 2:
 			return <FormReview />
+
 		default:
 			return <div>Not Found</div>
 	}
