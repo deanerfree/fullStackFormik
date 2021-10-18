@@ -3,6 +3,8 @@ from server.db import (collection)
 from bson import ObjectId
 from datetime import datetime
 
+currentDateTime = datetime.now()
+
 
 async def fetchAllUsers():
     userList = []
@@ -19,6 +21,8 @@ async def fetchUser(id: str) -> dict:
 
 
 async def createUser(user: dict) -> dict:
+    user["createDate"] = currentDateTime
+    print('hello', user["createDate"])
     user = await collection.insert_one(user)
     newUser = await collection.find_one({"_id": user.inserted_id})
     return helper(newUser)
@@ -36,7 +40,6 @@ async def updateUser(id: str, data: dict):
     if len(data) < 1:
         return False
     user = await collection.find_one({"_id": ObjectId(id)})
-    print("the user", user)
     if user:
         updated = await collection.update_one(
             {"_id": ObjectId(id)}, {"$set": data}
@@ -51,6 +54,7 @@ def helper(user) -> dict:
         "id": str(user["_id"]),
         "firstName": user["firstName"],
         "lastName": user["lastName"],
+        "email": user["email"],
         "age": user["age"],
         "company": user["company"],
         "address1": user["address1"],
