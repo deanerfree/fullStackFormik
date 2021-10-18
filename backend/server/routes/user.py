@@ -37,6 +37,7 @@ async def get_by_id(id):
 
 @router.post("/create", response_description="User added to the database")
 async def postUser(user: CreateUser = Body(...)):
+    print(user)
     user = jsonable_encoder(user)
     newUser = await createUser((user))
     if newUser:

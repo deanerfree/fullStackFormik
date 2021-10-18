@@ -9,6 +9,8 @@ const initialFormField = {
 	city: "",
 	province: "",
 	postalcode: "",
+	dateUpdated: "",
+	createDate: "",
 }
 
 export default initialFormField

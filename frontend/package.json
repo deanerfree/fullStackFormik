@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.23.0",
     "components": "^0.1.0",
     "formik": "^2.2.9",
     "formik-material-ui": "^4.0.0-alpha.1",
@@ -52,5 +53,6 @@
     "babel-cli": "^6.26.0",
     "chokidar": "^3.5.2",
     "glob-parent": "^6.0.2"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }

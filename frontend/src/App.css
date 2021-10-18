@@ -29,6 +29,9 @@
 .formBody {
 	margin: 10px;
 	height: 63vh;
+	overflow: auto;
+	width: 44vw;
+	scroll-behavior: auto;
 }
 
 .buttonWrapper {

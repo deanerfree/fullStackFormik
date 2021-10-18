@@ -1,5 +1,6 @@
 import "../App.css"
 import React, { useState } from "react"
+import axios from "axios"
 import { CircularProgress } from "@mui/material"
 import { Card, CardContent, Button, Box } from "@material-ui/core"
 import { Form, Formik } from "formik"
@@ -22,6 +23,21 @@ export default function UserForm() {
 	}
 
 	async function _submitForm(values, actions) {
+		const date = new Date()
+		if (values.age === "") {
+			values.age = 0
+		}
+		values.createDate = date.toString()
+		values.dateUpdated = date.toString()
+		console.log(values)
+		axios
+			.post("/api/create", values)
+			.then((resp) => {
+				console.log(resp)
+			})
+			.catch((err) => {
+				console.log(err)
+			})
 		await _sleep(1000)
 		alert(JSON.stringify(values, null, 2))
 		actions.setSubmitting(false)
@@ -45,8 +61,7 @@ export default function UserForm() {
 					onSubmit={_handleSubmit}>
 					{({ isSubmitting }) => (
 						<Form autoComplete='off' className='formWrapper'>
-							<div className='formBody'>{formStepper(activeStep)}</div>
-
+							<Box className='formBody'>{formStepper(activeStep)}</Box>
 							<Box>
 								{isSubmitting ? (
 									<CircularProgress />
@@ -59,7 +74,8 @@ export default function UserForm() {
 											disabled={isSubmitting}
 											type='submit'
 											variant='contained'
-											color='primary'>
+											color='primary'
+											size='small'>
 											{activeStep === 2 ? "Submit" : "Next"}
 										</Button>
 									</div>

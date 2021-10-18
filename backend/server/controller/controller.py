@@ -41,6 +41,7 @@ async def updateUser(id: str, data: dict):
         return False
     user = await collection.find_one({"_id": ObjectId(id)})
     if user:
+        print('I\'m being updated', updated)
         updated = await collection.update_one(
             {"_id": ObjectId(id)}, {"$set": data}
         )

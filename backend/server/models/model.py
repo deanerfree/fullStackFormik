@@ -3,7 +3,9 @@ from bson import ObjectId, Timestamp
 from datetime import datetime
 from typing import Optional
 
-currentDateTime = datetime
+# currentDateTime = datetime.strftime("%m/%d/%Y, %H:%M:%S")
+# currentDateTimeString = currentDateTime
+
 # currentDate = date.today()
 
 # Model to create a user
@@ -13,14 +15,15 @@ class CreateUser(BaseModel):
     firstName: str
     lastName: str
     age: int
+    email: str
     company: str
     address1: str
     address2: str
     city: str
     province: str
     postalcode: str
-    createDate: currentDateTime
-    dateUpdated: currentDateTime
+    createDate: str
+    dateUpdated: str
 
     class Config:
         arbitrary_types_allowed = True
@@ -31,6 +34,7 @@ class CreateUser(BaseModel):
 class UpdateUser(BaseModel):
     firstName: Optional[str]
     lastName: Optional[str]
+    email: Optional[str]
     age: Optional[int]
     company: Optional[str]
     address1: Optional[str]
@@ -38,7 +42,7 @@ class UpdateUser(BaseModel):
     city: Optional[str]
     province: Optional[str]
     postalcode: Optional[str]
-    dateUpdated: Optional[currentDateTime]
+    dateUpdated: Optional[str]
 
     class Config:
         arbitrary_types_allowed = True
