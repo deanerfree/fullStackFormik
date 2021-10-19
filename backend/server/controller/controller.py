@@ -8,6 +8,12 @@ format = "%d/%m/%Y %H:%M:%S"
 formattedDateTime = currentDateTime.strftime(format)
 
 
+async def checkEmail(user: dict) -> dict:
+    user = await collection.find_one({"email": user})
+    if user:
+        return True
+
+
 async def fetchAllUsers():
     userList = []
     users = collection.find({})

@@ -4,7 +4,8 @@ import FormFailure from "./FormFailure"
 
 export default function FormResult({ props }) {
 	const { responseData } = props
-	return responseData.status !== 200 ? (
+	console.log(responseData)
+	return responseData.data.code !== 200 ? (
 		<FormFailure props={responseData} />
 	) : (
 		<FormSuccess props={responseData} />

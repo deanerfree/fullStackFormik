@@ -30,6 +30,7 @@ export default function UserForm() {
 	}
 
 	async function _submitForm(values, actions) {
+		values.email = values.email.toLowerCase()
 		if (values.age === "") {
 			values.age = 0
 		}
