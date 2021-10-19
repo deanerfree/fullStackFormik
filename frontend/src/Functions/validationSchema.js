@@ -6,7 +6,8 @@ export const validation = [
 			.required("Required")
 			.min(3, "must contain at least 3 characters")
 			.max(20, "Max 20 characters"),
-		email: Yup.string("@")
+		email: Yup.string()
+			.matches(/^[A-Z0-9+_.-]+@[A-Z0-9.-]+$/i, "Not a valid email")
 			.min(3, "must contain at least 3 characters")
 			.max(40, "Max 40 characters")
 			.required("Valid email is required"),
