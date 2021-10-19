@@ -11,7 +11,9 @@ export default function FormSuccess({ props }) {
 		<CardContent>
 			{responseData ? (
 				<Box>
-					<Typography variant='h3'>Congratulations!</Typography>
+					<Typography variant='h2' sx={{}}>
+						Congratulations!
+					</Typography>
 					<br />
 					<Typography variant='h4'>
 						{responseData.data.data[0].firstName}{" "}
@@ -25,7 +27,9 @@ export default function FormSuccess({ props }) {
 					<Typography variant='body1'>On {modDate}</Typography>
 				</Box>
 			) : (
-				<CircularProgress />
+				<Box>
+					<CircularProgress />
+				</Box>
 			)}
 		</CardContent>
 	)

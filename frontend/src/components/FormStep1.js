@@ -7,6 +7,7 @@ export default function FormStep1() {
 	return (
 		<div>
 			<Typography variant='h2'>Form</Typography>
+
 			<div className='fieldItem'>
 				<Field
 					name='firstName'
