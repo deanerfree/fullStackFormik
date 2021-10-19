@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, HTTPException, Request, status
 from fastapi.encoders import jsonable_encoder
 
 from server.controller.controller import (
@@ -37,13 +37,17 @@ async def get_by_id(id):
     return ErrorResponseModel("An error occurred.", 404, "User doesn't exist.")
 
 
-@router.post("/create", response_description="User added to the database")
+@router.post("/create", response_description="User added to the database", status_code=200)
 async def postUser(user: CreateUser = Body(...)):
 
     user = jsonable_encoder(user)
     email = user["email"]
     checkUser = await checkEmail(user["email"])
     if checkUser:
+        # raise HTTPException(
+        #     status_code=400, detail=ErrorResponseModel(
+        #         "Email Exists", 400, f"Email: {email} already exists")
+        # )
         return ErrorResponseModel("Email Exists", 400, f"Email: {email} already exists")
     newUser = await createUser((user))
     if newUser:
