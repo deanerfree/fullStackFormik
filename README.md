@@ -4,7 +4,7 @@
 <div>
   <p>This is a full stack app built using the FARM framework</p>
   <p>Frontend is built using React and Formik to manage the form state</p>
-  <p>Backend is built on Python using FastAPI <a href="https://fastapi.tiangolo.com">Fast API</a></p>
+  <p>Backend is built on Python using <a href="https://fastapi.tiangolo.com">Fast API</a></p>
   <p>Database is built with MongoDB using motor to manage it</p>
 <div>
   <h3>Features</h3>
