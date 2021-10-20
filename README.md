@@ -14,8 +14,10 @@
     <li>Items in the form are validated using Formik and Yup</li>
     <li>Email format is validated using regex</li>
     <li>The request is sent to a FastAPI server then stored in a mongoDB</li>
+    <li>Server creates a timestamp when entered and updated</li>
     <li>The users email is the most unique entry so if the email already exists you will be redirected to a new page detailing the error</li>
-     <li>If the request to create a new entry is successful you will be redirected to a success page</li>
+    <li>If the request to create a new entry is successful you will be redirected to a success page</li>
+    <li>Successfull server response lets you know when the entry was made and who made it</li>
   </ol>
   </div>
 </div>
