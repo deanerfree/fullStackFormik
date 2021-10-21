@@ -18,7 +18,14 @@
     <li>The users email is the most unique entry so if the email already exists you will be redirected to a new page detailing the error</li>
     <li>If the request to create a new entry is successful you will be redirected to a success page</li>
     <li>Successfull server response lets you know when the entry was made and who made it</li>
+    <li>Server is setup for CRUD with the ability to get, get by id, edit, and delete additionally to creating a profile</li>
   </ol>
   </div>
 </div>
-
+<div>
+  <h3>Future Items</h3>
+  <ol>
+    <li>Fully connecting the frontend and backend to allow for get, put, and delete</li>
+  </ol>
+  </div>
+</div>
