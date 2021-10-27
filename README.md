@@ -13,13 +13,13 @@
   <li>In a folder of your liking git clone <a href='https://github.com/deanerfree/fullStackFormik'>http://https://github.com/deanerfree/fullStackFormik</a></li>
   <li>from console, terminal or command prompt type or copy npm install && npm start</li>
   <li>Enjoy!</li>
-<ol>
+</ol>
   <h4>Backend</h4>
 <ol>
   <li>Activate backend virtual environment : source venv/bin/activate</li>
   <li>Install packages: pip3 install -r requirements.txt</li>
   <li>Run the server: uvicorn server.app:app --reload</li>
-<ol>
+</ol>
   <h3>Features</h3>
   <ol>
     <li>This is a multistep form</li>
