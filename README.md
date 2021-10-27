@@ -39,6 +39,7 @@
   <h3>Future Items</h3>
   <ol>
     <li>Add full CRUD functionality of the app connecting the frontend and backend to allow for get, put, and delete</li>
+    <li>Design elements could be improved</li>
   </ol>
   </div>
 </div>
