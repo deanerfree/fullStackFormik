@@ -38,7 +38,7 @@
 <div>
   <h3>Future Items</h3>
   <ol>
-    <li>Fully connecting the frontend and backend to allow for get, put, and delete</li>
+    <li>Add full CRUD functionality of the app connecting the frontend and backend to allow for get, put, and delete</li>
   </ol>
   </div>
 </div>
