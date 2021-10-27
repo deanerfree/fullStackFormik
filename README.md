@@ -10,7 +10,7 @@
   <h3>To get started</h3>
   <h4>Frontend</h4>
 <ol>
-  <li>In a folder of your liking git clone <a href='https://github.com/deanerfree/fullStackFormik'>http://https://github.com/deanerfree/fullStackFormik</a></li>
+  <li>In a folder of your liking git clone <a href='https://github.com/deanerfree/fullStackFormik'>https://github.com/deanerfree/fullStackFormik</a></li>
   <li>from console, terminal or command prompt type or copy npm install && npm start</li>
   <li>Enjoy!</li>
 </ol>
