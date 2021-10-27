@@ -7,6 +7,19 @@
   <p>Backend is built on Python using <a href="https://fastapi.tiangolo.com">Fast API</a></p>
   <p>Database is built with MongoDB using motor to manage it</p>
 <div>
+  <h3>To get started</h3>
+  <h4>Frontend</h4>
+<ol>
+  <li>In a folder of your liking git clone <a href='https://github.com/deanerfree/fullStackFormik'>http://https://github.com/deanerfree/fullStackFormik</a></li>
+  <li>from console, terminal or command prompt type or copy npm install && npm start</li>
+  <li>Enjoy!</li>
+<ol>
+  <h4>Backend</h4>
+<ol>
+  <li>Activate backend virtual environment : source venv/bin/activate</li>
+  <li>Install packages: pip3 install -r requirements.txt</li>
+  <li>Run the server: uvicorn server.app:app --reload</li>
+<ol>
   <h3>Features</h3>
   <ol>
     <li>This is a multistep form</li>
