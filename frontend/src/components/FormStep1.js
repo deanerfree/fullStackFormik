@@ -4,51 +4,56 @@ import { Field } from "formik"
 import { TextField } from "formik-material-ui"
 
 export default function FormStep1() {
+	const listFieldItems = [
+		{
+			type: "text",
+			name: "firstName",
+			label: "First Name",
+			placeholder: "Enter First Name",
+		},
+		{
+			type: "text",
+			name: "lastName",
+			label: "Last Name",
+			placeholder: "Enter Last Name",
+		},
+		{
+			type: "text",
+			name: "email",
+			label: "Email",
+			placeholder: "Enter Email",
+		},
+		{
+			type: "number",
+			name: "age",
+			label: "Age",
+			placeholder: "Enter Age",
+		},
+		{
+			type: "text",
+			name: "company",
+			label: "Company",
+			placeholder: "Enter Company",
+		},
+	]
+
 	return (
 		<div>
 			<Typography variant='h2'>Form</Typography>
-
-			<div className='fieldItem'>
-				<Field
-					name='firstName'
-					label='First Name'
-					placeholder='Enter First Name'
-					component={TextField}
-				/>
-			</div>
-			<div className='fieldItem'>
-				<Field
-					name='lastName'
-					label='Last Name'
-					placeholder='Enter Last Name'
-					component={TextField}
-				/>
-			</div>
-			<div className='fieldItem'>
-				<Field
-					name='email'
-					label='Email'
-					placeholder='Enter Email'
-					component={TextField}
-				/>
-			</div>
-			<div className='fieldItem'>
-				<Field
-					type='number'
-					name='age'
-					label='Age'
-					placeholder='Enter Age'
-					component={TextField}
-				/>
-			</div>
-			<div className='fieldItem'>
-				<Field
-					name='company'
-					label='Company'
-					placeholder='Enter Company'
-					component={TextField}
-				/>
-			</div>
+			{listFieldItems.map((fieldItem, index) => {
+				return (
+					<div className='fieldItem' key={index}>
+						<Field
+							type={fieldItem.type}
+							name={fieldItem.name}
+							label={fieldItem.label}
+							placeholder={fieldItem.placeholder}
+							component={TextField}
+							style={{ width: "15rem" }}
+						/>
+					</div>
+				)
+			})}
 		</div>
 	)
 }

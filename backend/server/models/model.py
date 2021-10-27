@@ -1,12 +1,7 @@
 from pydantic import BaseModel, Field
 from bson import ObjectId, Timestamp
-from datetime import datetime
 from typing import Optional
 
-# currentDateTime = datetime.strftime("%m/%d/%Y, %H:%M:%S")
-# currentDateTimeString = currentDateTime
-
-# currentDate = date.today()
 
 # Model to create a user
 
