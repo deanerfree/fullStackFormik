@@ -11,10 +11,12 @@
   <h4>Frontend</h4>
 <ol>
   <li>In a folder of your liking git clone <a href='https://github.com/deanerfree/fullStackFormik'>https://github.com/deanerfree/fullStackFormik</a></li>
-  <li>from console, terminal or command prompt type or copy npm install && npm start</li>
+  <li>from console, terminal or command prompt open the folder where the project was cloned and type cd frontend</li>
+  <li>type npm start to start React app in localhost</li>
 </ol>
   <h4>Backend</h4>
 <ol>
+  <li>From your folder where you cloned the project type cd backend</li>
   <li>Activate backend virtual environment : source venv/bin/activate</li>
   <li>Install packages: pip3 install -r requirements.txt</li>
   <li>Run the server: uvicorn server.app:app --reload</li>
