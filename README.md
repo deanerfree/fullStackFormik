@@ -40,6 +40,7 @@
   <ol>
     <li>Add full CRUD functionality of the app connecting the frontend and backend to allow for get, put, and delete</li>
     <li>Design elements could be improved</li>
+    <li>Add authentication and some sort of dashboard</li>
   </ol>
   </div>
 </div>
