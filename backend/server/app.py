@@ -6,7 +6,7 @@ from server.routes.user import router as UserRouter
 app = FastAPI()
 
 origins = [
-    f"{API_CONNECTION}",
+    f"{API_CONNECTION}/api/create",
     "http://localhost:8000",
 ]
 app.add_middleware(
