@@ -6,6 +6,7 @@
   <p>Frontend is built using React and Formik to manage the form state</p>
   <p>Backend is built on Python using <a href="https://fastapi.tiangolo.com">Fast API</a></p>
   <p>Database is built with MongoDB using motor to manage it</p>
+  <p><strong>DEMO:</strong><a href="https://elegant-turing-0e9eb3.netlify.app">Simple Form App</a></p>
 <div>
   <h3>To get started</h3>
   <h4>Frontend</h4>
